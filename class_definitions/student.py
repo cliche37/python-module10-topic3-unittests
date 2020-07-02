@@ -2,6 +2,10 @@ class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
 
+        if (not isinstance(lname, str)):
+                raise ValueError
+        elif(lname.isnumeric()):
+            raise ValueError
 
         self.last_name = lname
         self.first_name = fname
