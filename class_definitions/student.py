@@ -10,7 +10,8 @@ class Student:
         if bad.issuperset(lname) or bad.issuperset(fname) or bad.issuperset(major):
             raise ValueError
 
-
+        if not isinstance(gpa, float) or 0.0 > gpa > 4.0:
+            raise ValueError
 
         self.last_name = lname
         self.first_name = fname
