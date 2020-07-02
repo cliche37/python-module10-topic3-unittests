@@ -15,12 +15,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.person.major, 'Software Engineering')
 
     def test_object_created_all_attributes(self):
-        self.student = Student('Smith', 'John', 'Software Engineering', 2.1)
+        student = Student('Smith', 'John', 'Software Engineering', 2.1)
 
-        self.assertEqual(self.student.last_name, 'Smith')
-        self.assertEqual(self.student.first_name, 'John')
-        self.assertEqual(self.student.major, 'Software Engineering')
-        self.assertEqual(self.student.gpa, 2.1)
+        self.assertEqual(student.last_name, 'Smith')
+        self.assertEqual(student.first_name, 'John')
+        self.assertEqual(student.major, 'Software Engineering')
+        self.assertEqual(student.gpa, 2.1)
+
+    def test_student_str(self):
+        self.assertEqual("Smith, John has major Software Engineering with gpa: 0.0", self.person.__str__())
 
 
 if __name__ == '__main__':
