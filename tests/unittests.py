@@ -42,6 +42,5 @@ class MyTestCase(unittest.TestCase):
             p = Student('Smith', 'John', 123)
 
 
-
 if __name__ == '__main__':
     unittest.main()
