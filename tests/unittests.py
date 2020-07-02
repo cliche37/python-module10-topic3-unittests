@@ -33,6 +33,14 @@ class MyTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             p = Student('Smith', '123', 'Software Engineering')
 
+    def test_object_not_created_error_first_name(self):
+        with self.assertRaises(ValueError):
+            p = Student('Smith', '123', 'Software Engineering')
+
+    def test_object_not_created_error_major(self):
+        with self.assertRaises(ValueError):
+            p = Student('Smith', 'John', 123)
+
 
 
 if __name__ == '__main__':
