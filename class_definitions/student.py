@@ -2,10 +2,15 @@ class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
 
+        bad = set('1234567890')
+
         if not isinstance(lname, str) or not isinstance(fname, str) or not isinstance(major, str):
             raise ValueError
-        elif lname.isnumeric() or fname.isnumeric() or major.isnumeric():
+
+        if bad.issuperset(lname) or bad.issuperset(fname) or bad.issuperset(major):
             raise ValueError
+
+
 
         self.last_name = lname
         self.first_name = fname
